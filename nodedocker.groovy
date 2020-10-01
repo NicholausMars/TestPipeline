@@ -16,7 +16,7 @@ job('NodeJS Docker example') {
         dockerBuildAndPublish {
             repositoryName('nicholaus93/docker-pipleline')
             tag('${BUILD_TIMESTAMP}-${GIT_REVISION,length=7}')
-            registryCredentials('docker-hub')
+            registryCredentials('dockerhub')
             forcePull(false)
             createFingerprints(false)
             skipDecorate()
