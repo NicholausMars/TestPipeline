@@ -1,4 +1,4 @@
 const app = require('./app');
 
 
-app.listen(3050, () => console.log('running server'));
+app.listen(3000, () => console.log('running server'));
