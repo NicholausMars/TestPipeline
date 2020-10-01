@@ -14,10 +14,12 @@ job('NodeJS Docker example') {
     }
     steps {
         dockerBuildAndPublish {
+        echo "docker file"
             repositoryName('nicholaus93/docker-pipleline')
-            tag('${BUILD_TIMESTAMP}-${GIT_REVISION,length=7}')
+            tag('${GIT_REVISION,length=9}')
             registryCredentials('dockerhub')
             forcePull(false)
+            forceTag(false)
             createFingerprints(false)
             skipDecorate()
         }
