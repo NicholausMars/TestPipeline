@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "SET NODE_ENV=test && nodemon --exec \"mocha  --recursive -R min\" "
+    "test": "yarn mocha",
+    "dev": "SET NODE_ENV=test && nodemon --exec \"mocha  --recursive -R min\" "
   },
   "dependencies": {
     "express": "^4.16.3",
